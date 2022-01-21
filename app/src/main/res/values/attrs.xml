@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <attr name="chipChoiceStyle" format="reference" />
+
     <declare-styleable name="CustomEditTextPreference">
         <attr name="limit" format="integer" />
     </declare-styleable>
-    <attr name="chipChoiceStyle" format="reference" />
+
     <declare-styleable name="IntegerListPreference">
         <!-- The human-readable array to present as a list. Each entry must have a corresponding
              index in entryValues. -->

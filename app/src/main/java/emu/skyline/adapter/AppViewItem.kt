@@ -87,6 +87,9 @@ class AppViewItem(var layoutType : LayoutType, private val item : AppItem, priva
     override fun bind(binding : LayoutBinding<*>, position : Int) {
         binding.textTitle.text = item.title
         binding.textSubtitle.text = item.subTitle ?: item.loaderResultString(binding.root.context)
+        // Make the title text view selected for marquee to work
+        binding.textTitle.isSelected = true
+        binding.textSubtitle.isSelected = true
 
         binding.icon.setImageBitmap(item.icon ?: missingIcon)
 

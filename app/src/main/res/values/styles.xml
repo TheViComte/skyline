@@ -1,9 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="RoundedAppImage">
+    <style name="ShapeAppearance.App.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">@dimen/corner_radius</item>
+    </style>
+    <style name="ShapeAppearance.App.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/corner_radius</item>
+    </style>
+
+    <!-- android:elevation makes BottomSheetDialog background color brighter than it should be -->
+    <style name="ThemeOverlay.App.BottomSheetDialog" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Widget.App.BottomSheet</item>
+    </style>
+
+    <style name="Widget.App.BottomSheet" parent="Widget.MaterialComponents.BottomSheet">
+        <item name="android:elevation">@null</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.App.BottomSheetDialog</item>
+    </style>
+
+    <style name="ShapeAppearance.App.BottomSheetDialog" parent="">
+        <item name="cornerSizeTopLeft">@dimen/corner_radius_large</item>
+        <item name="cornerSizeTopRight">@dimen/corner_radius_large</item>
+    </style>
+
+    <!-- Workaround for AndroidX Preference as it doesn't use MaterialAlertDialogBuilder -->
+    <style name="ThemeOverlay.App.MaterialAlertDialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="android:dialogCornerRadius">@dimen/corner_radius</item>
     </style>
 
     <style name="ChipChoice" parent="Widget.MaterialComponents.Chip.Choice">

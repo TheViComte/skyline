@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="grid_padding">8dp</dimen>
-    <dimen name="corner_radius">8dp</dimen>
+    <dimen name="corner_radius">6dp</dimen>
+    <dimen name="corner_radius_large">12dp</dimen>
 </resources>
